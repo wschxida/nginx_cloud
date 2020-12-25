@@ -1,3 +1,4 @@
+#！/bin/bash
 
 ps -ef | grep "nginx -c" | grep -v grep | awk '{print $2}' | xargs sudo kill -TERM
 
