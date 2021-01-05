@@ -1,6 +1,0 @@
-http
--t tcp
--p 0.0.0.0:5300
---forever
--T tls
---jumper "http://bxupro:2018Prxy@209.0.50.235:29842"
