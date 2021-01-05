@@ -1,0 +1,15 @@
+1.goproxy
+--对于需要验证的父代理支持不好，google文档示例也不够丰富
+2.tinyproxy
+--对于需要验证的父代理支持不好，google文档示例也不够丰富
+3.squid【推荐】
+--google文档丰富，参考示例很多，配置说明详细，可设置多个父代理，支持权重、循环等。
+功能强大，使用广泛
+
+多个父代理：
+cache_peer 172.102.194.176 parent 29842 0 login=bxupro:2018Prxy round-robin no-query
+cache_peer 172.102.194.190 parent 29842 0 login=bxupro:2018Prxy round-robin no-query
+cache_peer 172.102.194.97 parent 29842 0 login=bxupro:2018Prxy round-robin no-query
+
+参考：
+https://blog.51cto.com/531117978/2311097
