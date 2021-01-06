@@ -13,3 +13,8 @@ cache_peer 172.102.194.97 parent 29842 0 login=bxupro:2018Prxy round-robin no-qu
 
 参考：
 https://blog.51cto.com/531117978/2311097
+
+用途：
+在selenium获取twitter guest token时，需要用代理来切换IP，而selenium参数"--proxy-server="不支持直接加有账号密码的代理（很麻烦，需插件），
+所以可用squid部署一个代理服务，整合所有代理如luminati等有账号密码的代理，对内提供http://127.0.0.1:3128的代理服务，
+selenium直接加参数"--proxy-server=http://127.0.0.1:3128"就可使用。
